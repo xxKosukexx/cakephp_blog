@@ -1,0 +1,992 @@
+/* webサイトの一番下の余白を消す */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    word-break: break-all;
+}
+
+/* モーダルやモバイルヘッダーで背景がスクロールされないようにするために使用する。 */
+body.bg-fixed {
+    overflow-y: hidden;
+}
+
+#scroll-top-move{
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #87cefa;
+    font-size: 40px;
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    display: none;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#scroll-top-move img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ヘッダー、コンテンツ、フッターの親ブロックのスタイルを定義する */
+#container{
+    height: 100%;
+    background-color: #fff;
+}
+
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+#header .back-curtain{
+    background: rgba(0, 0, 0, 0.5); // ③透過率５０％
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+/* ヘッダーのスタイルを定義する */
+#header-normal{
+  /* ヘッダーが無駄に大きくなるのを防ぐため */
+  height: 60px;
+  padding: 0;
+}
+
+#header-normal .container-fluid{
+    height: 100%;
+}
+
+#header-normal .container-fluid .row{
+    width: 100%;
+    height: 100%;
+}
+
+#header-normal{
+    color: #fff;
+}
+
+
+#header-normal a{
+  /* 下線を消す。 */
+  text-decoration: none;
+
+  /* メニューの縦位置を揃えるため */
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+#header-normal a:link{
+}
+
+#header-normal ul{
+  /* リストの点を消す */
+  height: 100%;
+  list-style: none;
+  margin: 0;
+}
+
+#header-normal ul li{
+  /* 横並びにする。 */
+  display: inline;
+}
+
+/* menu */
+#header-normal #menu{
+  padding: 0;
+  padding-left: 30px;
+}
+
+#header-normal #menu a{
+    padding-top: 16px;
+}
+
+/* search */
+
+#header-normal #search{
+}
+
+#header-normal #login-user #username{
+    text-align: right;
+}
+
+#header-normal #login-user div{
+    height: 100%;
+}
+
+#header-normal #menu, #header-normal #search,#header-normal #login-user{
+    height: 100%;
+}
+/* アイコンのサイズはマージン含めてヘッダーと同じサイズでないと検索フォームが非表示の時と表示の時ではレイアウトがずれる。 */
+#header-normal #search #icon{
+  /* 検索アイコンが入力フォームに引っ付かないようにする。 */
+  margin: 5px 5px auto 5px;
+  cursor: pointer;
+}
+
+#header-normal #search #icon img{
+
+}
+
+#header-normal #search input{
+}
+
+#header-normal #search div{
+  /* 検索フォームの入力フォームとボタンが大きくなるのを防ぐ */
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#header-normal #search_toggle{
+    display: none;
+}
+
+#header-normal #username {
+    padding-top: 15px;
+}
+
+#header-normal #profile-icon a{
+    vertical-align: middle;
+}
+
+#header-normal #profile-icon img{
+    display: block;
+    border: solid 3px #ff7f50;
+    object-fit: contain;
+    background-color: #ff7f50;
+}
+
+#header-normal .search_toggle{
+    display: none;
+}
+
+#header-normal .nav-item{
+}
+
+#header-normal .dropdown-menu{
+  background-color: #3ed832;
+}
+
+#header-normal .dropdown-menu a{
+  color: #fff;
+  padding-left: 8px;
+}
+
+#header-normal .dropdown-menu a:hover{
+  background-color: #000;
+}
+
+#mobile-header{
+    display: none;
+    height: 60px;
+    text-align: right;
+}
+
+#mobile-header-body{
+    /* display: none; */
+    position: fixed;
+    height: 90%;
+    top: 60px;
+    left: 100%;
+    z-index: 1000;
+    width: 100%;
+    max-width: 375px;
+    background-color: #fff;
+    overflow: scroll;
+    font-weight: 600;
+}
+
+#mobile-header-body a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#mobile-header-body ul{
+    list-style: none;
+    padding: 0;
+}
+
+#mobile-header-body ul span{
+    margin-top: 20px;
+}
+
+#mobile-header-body ul li{
+    /* margin-top: 20px; */
+    position: relative;
+}
+
+#mobile-header-body ul li ul{
+    display: none;
+}
+
+#mobile-header-body ul span::before,
+#mobile-header-body ul span::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 3px;
+  border-radius: 5px;
+  background: #000;
+  position: absolute;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#mobile-header-body ul span::after {
+  background: #000;
+  transform: translateY(-50%) rotate(90deg);
+  transition: 0.5s;
+}
+
+#mobile-header-body ul .active::after {
+  transform: rotate(0);
+  transition: 0.5s;
+}
+
+#mobile-header-body ul li ul li{
+    border-bottom: groove 1px #000;
+    height: 60px;
+    margin-left: 30px;
+}
+
+#mobile-header-body ul li ul li a{
+    padding-top: 20px;
+    height: 100%;
+}
+
+#mobile-header-body #mobile-menu,
+#mobile-header-body #mobile-search,
+#mobile-header-body #mobile-login-user,
+#mobile-header-body #mobile-close{
+    width: 90%;
+    margin: auto 5%;
+}
+
+#mobile-header-body #mobile-menu{
+    margin-top: 30px;
+}
+
+#mobile-header-body #mobile-search{
+    margin-top: 30px;
+}
+
+#mobile-header-body #mobile-search .search_toggle{
+    margin-bottom: 0;
+}
+
+#mobile-header-body #mobile-login-user{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#mobile-header-body #mobile-close{
+}
+
+#mobile-header-body #mobile-login-user img{
+    display: block;
+    border: solid 3px #ff7f50;
+    object-fit: contain;
+    background-color: #ff7f50;
+}
+
+/* コンテンツ部分のスタイルを適用する */
+#content{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* フッターのスタイルを定義する。 */
+#footer{
+    background-color: #000;
+    color: #fff;
+    padding-top: 50px;
+}
+
+#footer .copyright{
+    margin: 40px 0 auto;
+}
+
+/* コントローラーごとのスタイルを定義する */
+/* users/add */
+#users__add{
+    width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 14px 18px;
+    border-radius: 15px;
+    border: solid 1px #E6E6E6;
+}
+
+#users__add #select-address-elem .form-group{
+    margin-bottom: 0;
+}
+
+#users__add #address-select, #users__add #address_msg{
+    display: none;
+}
+
+#users__add .hurigana-left-and-right-margin{
+    margin: auto 5px;
+}
+
+#users__send-msg #close-window{
+    display: none;
+}
+
+/* posts/index */
+#post__index{
+  margin-top: 30px;
+}
+
+#post__index .container-fluid{
+  margin-top: 30px;
+}
+
+#post__index .post-delete{
+    margin-top: 2px;
+}
+
+/* post/view */
+#post__view{
+    margin-top: 70px;
+    width: 100%;
+}
+#post__view #view-title{
+    font-size: 4rem;
+}
+
+#post__view .view-image{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#post__view .view-image .image{
+    width: 100%;
+    overflow: hidden;
+}
+
+#post__view .view-image .image img{
+    width: 100%;
+    max-height: 300px;
+    background-color: #F2F2F2;
+    object-fit: contain;
+}
+
+#post__view .back-curtain{
+    background: rgba(0, 0, 0, 0.5); // ③透過率５０％
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+#post__view .view-image .largeImg{
+    position: fixed;
+    height: 50%;
+    background-color: #A4A4A4;
+    top: 27%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1000;
+    display: none;
+    border-radius: 10px;
+    border: solid 10px #fff;
+}
+
+#post__view .slide{
+position:relative;
+}
+#post__view .slide .largeImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 999;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#post__view .slide .slide-nav{
+    position:fixed;
+    display: none;
+    width: 96%;
+    margin: auto 2%;
+    background-color: #f0e68c;
+    top: 78%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+}
+
+#post__view .slide .slide-nav .elem{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+
+#post__view .slide .slide-nav .elem div{
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: #000;
+}
+
+#post__view .slide .slide-nav .pos{
+    position: absolute;
+    background-color: #4169e1;
+    top: 0
+}
+
+/* ナビゲーションはばの設定用 */
+#post__view .slide .slide-nav,
+#post__view .slide .slide-nav .elem div,
+#post__view .slide .slide-nav .pos{
+    height: 10px;
+}
+
+
+
+#post__view .slide-operation{
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#post__view .slide-operation .next{
+    position:absolute;
+    top: 40%;
+    left: 85%;
+    z-index: 1000;
+    font-size: 8rem;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#post__view .slide-operation .prev{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 1000;
+    font-size: 8rem;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#post__view .mobile-slide-operation{
+    display: none;
+    position:fixed;
+    width: 100%;
+    top: 83%;
+    left: 0;
+    z-index: 999;
+}
+
+#post__view .view-image .image-delete{
+    width: 50%;
+    padding: 2px 5px;
+}
+
+
+
+#post__view .view-image .image-edit{
+    width: 50%;
+    padding: 2px 5px;
+}
+
+#post__view #related_post img{
+    width: 100%;
+    max-height: 300px;
+    background-color: #F2F2F2;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+#posts__draft-index td div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#posts__edit-draft #edit-thumbnail{
+    margin-bottom: 30px;
+}
+
+#posts__edit-draft #edit-thumbnail img{
+    width: 100%;
+    max-height: 300px;
+    background-color: #F2F2F2;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+#posts__edit-draft #edit-image,#posts__edit-draft #edit-image-mobile{
+    margin-bottom: 30px;
+}
+
+#posts__edit-draft #edit-image img,#posts__edit-draft #edit-image-mobile img{
+    width: 100%;
+    height: 100px;
+    background-color: #F2F2F2;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+#posts__edit-draft #edit-image-mobile img{
+    height: 200px;
+}
+
+#posts__edit-draft #edit-image-mobile{
+    display:none;
+}
+
+#posts__edit-draft #edit-image-mobile .view-image{
+    flex: 0 0 50%;
+    position: relative;
+    width: 100%;
+    padding: auto 1px;
+}
+
+#posts__edit-draft #edit-image-mobile .image{
+    flex: 0 0 100%;
+    max-width: 96%;
+    position: relative;
+    width: 100%;
+    margin: auto 2%;
+}
+
+#posts__edit-draft #edit-image-mobile .image-delete,
+#posts__edit-draft #edit-image-mobile .image-edit{
+    flex: 0 0 46%;
+    position: relative;
+    max-width: 96%;
+    width: 100%;
+    margin: auto 2%;
+}
+
+/* images/upload */
+
+/* addresses/csv_import */
+
+#addresses__csv_import .button,#addresses__csv_update .button{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#addresses__csv_import #result_msg,#addresses__csv_update #result_msg{
+    text-align: center;
+}
+
+#addresses__csv_import #csv-upload-label{
+    margin-right: 5px;
+}
+#addresses__csv_import #cancel,#addresses__csv_update #cancel{
+    display: none;
+    position: relative;
+    z-index: 20000; /*画面ロックの幕より優先順位を上にする。キャンセルだけ押せるようにするため。*/
+    margin-left: 5px;
+}
+
+#addresses__csv_import #csv-upload-label, #addresses__csv_import #cancel,
+#addresses__csv_update #csv-update-label, #addresses__csv_update #cancel{
+    margin: 0;
+}
+/* contacts/index */
+#contacts__index #normal-index .delete{
+    margin-top: 10px;
+}
+
+#contacts__index #mobile-index{
+    display: none;
+}
+
+/***** elements *****/
+
+
+#side-bar a{
+}
+
+/****** 全てのページに適用するスタイルを以下に定義する。 ******/
+.pagination{
+    /* padding: 0 auto; */
+    justify-content: center;
+}
+
+/* モーダル専用のスタイル */
+div#msg-modal {
+	display: none;
+	position: fixed;
+    z-index: 10001;
+	width: 100%;
+	height: 100%;
+    top: 0;
+    left: 0;
+}
+div#msg-modal div.background {
+	position: fixed;
+    z-index: 10002;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+	-ms-filter: "alpha(opacity=75)";
+}
+div#msg-modal div.container {
+	position: absolute;
+    z-index: 10003;
+	width: 500px;
+	height: 500px;
+	background-color: #ffffff;
+    overflow: hidden;
+    /* 上下中央 */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* 記事を一覧で表示する部分のスタイル */
+.post-list .title{
+  font-size: 3rem;
+}
+
+.post-list .read-next{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.post-list .thumbnail{
+    width: 100%;
+    overflow: hidden;
+}
+
+.post-list .thumbnail img{
+    width: 100%;
+    max-height: 300px;
+    background-color: #F2F2F2;
+    object-fit: contain;
+}
+
+/* 記事やヘッダーの部品、フッターの部品を中央に表示するためのクラス */
+.blog-middle{
+  margin: auto auto auto auto;
+  width: 912px;
+}
+
+@media (max-width: 925px){
+  .blog-middle{
+    margin: 0 2% 0 2%;
+    width: 96%;
+  }
+}
+
+/* input fileにデザインを適用するためのスタイル */
+.label-file input[type="file"] {
+   display: none;
+   padding: 0;
+   margin: 0;
+}
+.label-file {
+cursor:pointer; /* マウスカーソルの形を指定する */
+}
+
+/* htmlヘルパーによって作成される無駄なdivを非表示にする */
+.label-file div{
+    display: none;
+}
+/* ファイル選択フォームで、file formのみの場合ははじめにボタンを非表示にし、ファイルを選択したらボタンを表示する。 */
+.label-file-button{
+    display: none;
+}
+
+
+/* submitボタンにデザインを適用するためのスタイル。そのままだと色の変更ができない。 */
+.label-submit input[type="submit"]{
+    display: none;
+}
+
+.label-submit{
+    cursor: pointer;
+}
+
+.label-submit div{
+    display: none;
+}
+
+.loading{
+    display: none;
+    margin-top: 40px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.loading .dot-spin{
+    position: absolute;
+    top: 0;
+    left: 47%;
+}
+
+/* お問い合わせ返信画面のスピナーが少し重なってしまうため、位置を調整する。 */
+#contacts__send-contact .loading .dot-spin{
+    position: absolute;
+    top: 0;
+    left: 44%;
+}
+
+.loading p{
+    position: absolute;
+    top: -5px;
+    left: 50%;
+}
+
+.success{
+    margin: 5px auto;
+    color: #fff;
+    background-color: #01DF3A;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.error{
+    margin: 5px 0;
+    color: #fff;
+    background-color: #FE2E2E;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1rem;
+}
+.success,.error{
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    font-family: arial;
+}
+
+.tag-error{
+    background-color: #FE2E2E;
+    padding: 10px;
+    border-radius: 5px;
+}
+.tag-error-message{
+
+}
+.file-error-message{
+    background-color: #FE2E2E;
+    /* padding: 10px; */
+    border-radius: 5px;
+}
+
+.padi_width_5px{
+    padding: auto 5px;
+}
+
+/* bootstrapのスタイルでbtn-blockの兄弟要素にbtn-blockがいた場合
+marginが入るようになっているので、0に設定する。
+もっと正しいやり方ってあるのかな？*/
+.btn-block+.btn-block{
+    margin: 0;
+}
+
+.emphasis-color-high{
+    background-color: #007bff;
+}
+
+.emphasis-color-normal{
+    background-color: #b0c4de;
+}
+
+.emphasis-color-low{
+    background-color: #f0f8ff;
+}
+
+.font-white{
+    color: #fff;
+}
+
+.image img{
+    width: 100%;
+    max-height: 300px;
+    background-color: #F2F2F2;
+    object-fit: contain;
+}
+
+.margin-top-15{
+    margin-top: 15px;
+}
+
+/* リストを付箋風のデザインにする */
+.list-design-husen-blue ul, .list-design-husen-blue ol {
+  padding: 0;
+  position: relative;
+}
+
+.list-design-husen-blue ul li, .list-design-husen-blue ol li {
+  color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;/*左側の線*/
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+   line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+}
+
+.list-design-husen-blue a{
+    display: block;
+    text-decoration: none;
+}
+
+.list-design-husen-yellow ul, .list-design-husen-yellow ol {
+  padding: 0;
+  position: relative;
+}
+
+.list-design-husen-yellow ul li, .list-design-husen-yellow ol li {
+  border: solid 1px #ffff00;
+  border-left: solid 6px #ffff00;/*左側の線*/
+  background: #000;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+}
+
+.list-design-husen-yellow ul li:hover, .list-design-husen-yellow ol li:hover {
+    background-color: #98fb98;
+}
+
+.list-design-husen-yellow a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+
+/*** 画面縮小時のデザインを以下に示す ***/
+
+@media (max-width: 750px){
+    /* フッターでしているbootstrapの適用を変更する。 */
+    #footer .col-6{
+        max-width: 100%;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+/* ヘッダーの画面縮小デザイン レイアウトが崩れるのが1185なので修正する。 */
+@media (max-width: 1185px){
+    #header-normal{
+        display: none;
+    }
+    #mobile-header{
+        display: block;
+    }
+}
+
+/* ユーザー登録画面のモバイルデザイン */
+@media (max-width: 620px){
+    #users__add{
+        width: 100%;
+    }
+}
+
+/* 画面縮小時のスライドショーの画面デザイン */
+@media (max-width: 800px){
+    #post__view .view-image .largeImg{
+        width: 100%;
+    }
+}
+
+/* お問い合わせ一覧画面の画面縮小時のデザイン */
+@media (max-width: 700px){
+    #contacts__index #normal-index{
+        display: none;
+    }
+    #contacts__index #mobile-index{
+        display: block;
+    }
+}
+
+/* 編集画面の画像一覧の画面縮小時のデザイン */
+@media (max-width: 925px){
+    #posts__edit-draft #edit-image-mobile{
+        display:block;
+    }
+    #posts__edit-draft #edit-image{
+        display: none;
+    }
+}
+
+/*** モバイル用のデザインを以下に示す ***/

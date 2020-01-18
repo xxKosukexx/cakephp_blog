@@ -1,0 +1,526 @@
+############################
+#
+# 国際化対応するためのメッセージ
+#
+############################
+
+
+#########Viewのメッセージの翻訳###########
+msgid "Kosuke Blog"
+msgstr "こうすけのブログ"
+
+msgid "Add Post"
+msgstr "記事を追加する"
+
+msgid "Read Post"
+msgstr "記事を読む"
+
+msgid "Delete Post"
+msgstr "記事を削除する"
+
+msgid "Post Date"
+msgstr "投稿日時"
+
+msgid "Category"
+msgstr "カテゴリ"
+
+msgid "Category Name"
+msgstr "カテゴリ名"
+
+msgid "Add Category"
+msgstr "カテゴリの追加"
+
+msgid "Tag"
+msgstr "タグ"
+
+msgid "Tag Name"
+msgstr "タグ名"
+
+msgid "Add Tag"
+msgstr "タグの追加"
+
+msgid "Contributor"
+msgstr "投稿者"
+
+msgid "Delete Image"
+msgstr "画像を削除する"
+
+msgid "Edit Image"
+msgstr "画像を編集する"
+
+msgid "Add Image"
+msgstr "画像を追加する"
+
+msgid "Title"
+msgstr "タイトル"
+
+msgid "Body"
+msgstr "内容"
+
+msgid "Add Thumbnail"
+msgstr "サムネイルを追加する"
+
+msgid "Select Image File"
+msgstr "画像ファイルを選択してください"
+
+msgid "Select CSV File"
+msgstr "CSVファイルを選択してください"
+
+msgid "No Select"
+msgstr "未選択"
+
+msgid "Update Address"
+msgstr "住所のアップデート"
+
+msgid "Import Address"
+msgstr "住所のインポート"
+
+msgid "Add"
+msgstr "追加"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "Sign Up"
+msgstr "登録"
+
+msgid "Replacement"
+msgstr "差し替える"
+
+msgid "Import"
+msgstr "インポート"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Importing"
+msgstr "インポート中"
+
+msgid "Multiple Add Possible"
+msgstr "複数追加可"
+
+msgid "Sign Up User"
+msgstr "ユーザーを登録"
+
+msgid "User Name"
+msgstr "ユーザー名"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Zipcode"
+msgstr "郵便番号"
+
+msgid "Address"
+msgstr "住所"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Publish"
+msgstr "公開"
+
+msgid "Edit Draft"
+msgstr "下書き編集"
+
+msgid "Edit Thumbnail"
+msgstr "サムネイル編集"
+
+msgid "Select Address"
+msgstr "選択住所"
+
+msgid "User Authority"
+msgstr "ユーザー権限"
+
+msgid "Replacement Image"
+msgstr "画像を差し替える"
+
+msgid "Login"
+msgstr "ログインする"
+
+msgid "It is automatically entered in the address field by performing a postal code search."
+msgstr "郵便番号検索をすることで住所欄に自動入力されます。"
+
+msgid "Search Post Result"
+msgstr "記事の検索結果"
+
+msgid "Draft Index"
+msgstr "下書き一覧"
+
+msgid "Draft"
+msgstr "下書き"
+
+msgid "User Index"
+msgstr "ユーザー一覧"
+
+msgid "Send Message"
+msgstr "メッセージを送る"
+
+msgid "Send"
+msgstr "送る"
+
+msgid "To login screen"
+msgstr "ログイン画面へ"
+
+msgid "Add Profile Image"
+msgstr "プロフィール画像の追加"
+
+msgid "My Page"
+msgstr "マイページ"
+
+msgid "Profile Image"
+msgstr "プロフィール画像"
+
+msgid "Post Index"
+msgstr "投稿一覧"
+
+msgid "Message Index"
+msgstr "メッセージ一覧"
+
+msgid "Close Window"
+msgstr "ウィンドウを閉じる"
+
+msgid "Resend this registration email"
+msgstr "本登録用のメールを再送信する。"
+
+msgid "Replying"
+msgstr "返信中"
+
+msgid "Updating"
+msgstr "アップデート中"
+
+msgid "Updating"
+msgstr "アップデート中"
+
+msgid "Contact Us"
+msgstr "お問い合わせ"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "E-Mail"
+msgstr "メールアドレス"
+
+msgid "Contact Index"
+msgstr "お問い合わせ一覧"
+
+msgid "Send Contact"
+msgstr "お問い合わせに返信する"
+
+msgid "Action"
+msgstr "アクション"
+
+msgid "Back to top"
+msgstr "Topへ戻る"
+
+msgid "Thank you for your inquiry."
+msgstr "お問い合わせありがとうございました。"
+
+msgid "An article has been added."
+msgstr "記事の追加が完了しました。"
+
+msgid "Temporary registration is complete. An e-mail for registration has been sent."
+msgstr "仮登録が完了しました。本登録するためのメールを送信しましたので、ご確認ください。"
+
+msgid "Twitter authentication is complete."
+msgstr "Twitter認証が完了しました。"
+
+msgid "Confirm"
+msgstr "確認"
+
+msgid "Correct"
+msgstr "修正"
+
+msgid "Password Confirm"
+msgstr "パスワード(確認)"
+
+msgid "Regist"
+msgstr "登録"
+
+msgid "Popular Post"
+msgstr "人気記事"
+
+msgid "New Post"
+msgstr "新着記事"
+
+msgid "Attention Post"
+msgstr "注目記事"
+
+msgid "Huri Kata"
+msgstr "フリガナ"
+
+msgid "Huri Hira"
+msgstr "ふりがな"
+
+msgid "User Regist"
+msgstr "ユーザー登録"
+
+msgid "Logout"
+msgstr "ログアウト"
+
+msgid "Auth Twitter"
+msgstr "Twitter認証"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "Auth Related"
+msgstr "認証関連"
+
+msgid "Auth Related"
+msgstr "認証関連"
+
+msgid "Post Related"
+msgstr "記事関連"
+
+msgid "Address Related"
+msgstr "住所関連"
+
+msgid "Contact Related"
+msgstr "お問合せ関連"
+
+msgid "Next"
+msgstr "次へ"
+
+msgid "Prev"
+msgstr "前へ"
+
+msgid "Close Menu"
+msgstr "メニューを閉じる"
+
+msgid "Huri Surname"
+msgstr "姓"
+
+msgid "Huri Name"
+msgstr "名"
+
+msgid "Revive"
+msgstr "復活"
+
+msgid "Index Delete Post"
+msgstr "削除した記事一覧"
+
+
+#########コントローラーのメッセージの翻訳##########
+
+### posts ###
+msgid "Successfully added an article."
+msgstr "記事を追加することに成功しました。"
+
+msgid "Failed to add article."
+msgstr "記事を追加することに失敗しました。"
+
+msgid "Invalid post"
+msgstr "無効な記事です。"
+
+msgid "Your post has been updated."
+msgstr "記事の編集に成功しました。"
+
+msgid "Unable to update your post."
+msgstr "記事の編集に失敗しました。"
+
+msgid "The post with id: %s has been deleted."
+msgstr "id: %sの記事の削除に成功しました。"
+
+msgid "The post with id: %s could not be deleted."
+msgstr "id: %sの記事の削除に失敗しました。"
+
+msgid "An article has been published."
+msgstr "記事を公開しました。"
+
+msgid "The article could not be published."
+msgstr "記事の公開できませんでした。"
+
+msgid "Updated the article."
+msgstr "記事を更新しました。"
+
+msgid "The article could not be updated."
+msgstr "記事を更新できませんでした。"
+
+### images ###
+
+msgid "Invalid image"
+msgstr "無効な画像です。"
+
+msgid "The image was uploaded successfully."
+msgstr "画像のアップロードに成功しました。"
+
+msgid "Image upload failed."
+msgstr "画像のアップロードに失敗しました。"
+
+msgid "The image with id: %s has been deleted."
+msgstr "id: %sの画像の削除に成功しました。"
+
+msgid "The image with id: %s could not be deleted."
+msgstr "id: %sの画像の削除に失敗しました。"
+
+msgid "Successfully replaced the image."
+msgstr "画像の差し替えに成功しました。"
+
+msgid "Failed to replace image."
+msgstr "画像の差し替えに失敗しました。"
+
+msgid "Related Post"
+msgstr "関連記事"
+
+msgid "Send Back"
+msgstr "返信する"
+
+### Addresses ###
+
+msgid "The file does not support character codes. Please convert to SJIS or UTF-8."
+msgstr "対応していない文字コードです。UTF-8かSJISに変換してください。"
+
+msgid "The import was successful."
+msgstr "インポートに成功しました"
+
+msgid "Import failed."
+msgstr "インポートに失敗しました。"
+
+msgid "Failed to read csv file."
+msgstr "CSV ファイルの読み込みに失敗しました"
+
+msgid "File upload failed."
+msgstr "CSV ファイルのアップロードに失敗しました。"
+
+msgid "The update was successful."
+msgstr "アップデートに成功しました。"
+
+msgid "Update failed."
+msgstr "アップデートに失敗しました。"
+
+### Tags ###
+msgid "Your Tag has been saved."
+msgstr "タグの追加に成功しました。"
+
+msgid "Unable to add your Tag."
+msgstr "タグの追加に失敗しました。"
+
+### Categories ###
+
+msgid "Your Category has been saved."
+msgstr "カテゴリの追加に成功しました。"
+
+msgid "Unable to add your Category."
+msgstr "カテゴリの追加に失敗しました。"
+
+### Users ###
+
+msgid "Invalid username or password, try again"
+msgstr "ログインに失敗しました。"
+
+msgid "Invalid user"
+msgstr "無効なユーザーです。"
+
+msgid "User registration was successful."
+msgstr "ユーザー登録に成功しました。"
+
+msgid "User registration failed."
+msgstr "ユーザー登録に失敗しました。"
+
+msgid "User information has been edited successfully."
+msgstr "ユーザー情報の編集に成功しました。"
+
+msgid "Editing user information failed."
+msgstr "ユーザー情報の編集に失敗しました。"
+
+msgid "User deleted"
+msgstr "ユーザー情報の削除に成功しました。"
+
+msgid "User was not deleted"
+msgstr "ユーザー情報の削除に失敗しました。"
+
+msgid "A message has been sent."
+msgstr "メッセージを送信しました。"
+
+msgid "The message could not be sent."
+msgstr "メッセージを送信できませんでした。"
+
+msgid "Temporary registration success. Email sent."
+msgstr "仮登録しました。本登録するためにメールを送信しました。"
+
+msgid "Twitter authentication failed."
+msgstr "Twitter認証できませんでした。"
+
+msgid "Your account has been activated."
+msgstr "アカウントを本登録しました。"
+
+msgid "Invalid activation URL"
+msgstr "本登録するために無効なURLです。"
+
+*** Contacts ***
+
+msgid "Your inquiry has been sent."
+msgstr "お問い合わせ内容を送信しました。"
+
+msgid "Failed to send inquiry details."
+msgstr "お問い合わせ内容の送信に失敗しました。"
+
+msgid "We have resent the registration email."
+msgstr "本登録用のメールを再送信しました。"
+
+msgid "The article has been revived."
+msgstr "記事を復活させました。"
+
+msgid "Failed to revive the article."
+msgstr "記事を復活させるのに失敗しました。"
+
+
+########## バリデーションメッセージ ##########
+
+### Post ###
+msgid "Please select a tag (2-4 pieces)"
+msgstr "タグを選択してください(2~4)"
+
+#*以下はimageモデルでも使用します。
+
+msgid "Only jpg and jpeg file extensions can be specified."
+msgstr "ファイルの拡張子はjpgとjpegのみ指定可能です。"
+
+msgid "MIME type can be specified only for image / jpeg."
+msgstr "MIME typeはimage/jpegのみ指定可能です。"
+
+msgid "Only 1 ~ 10MB file size can be specified."
+msgstr "ファイルサイズは1~10MBのみ指定可能です。"
+
+msgid "File upload failed."
+msgstr "ファイルのアップロードに失敗しました。"
+
+
+### Tag ###
+
+### Category ###
+
+### User ###
+
+msgid "Please enter a password with a minimum of 8 alphanumeric characters."
+msgstr "パスワードは先頭大文字の半角英数字、最低８文字を入力してください。"
+
+msgid "Enter the postal code as a 7-digit number."
+msgstr "郵便番号は7桁の数字で入力してください。"
+
+msgid "Please enter your e-mail address"
+msgstr "メールアドレスを入力してください。"
+
+msgid "Please enter your e-mail address"
+msgstr "メールアドレスを入力してください。"
+
+msgid "It does not match the confirmation password."
+msgstr "確認用のパスワードと一致していません。"
+
+msgid "Please enter your hiragana"
+msgstr "ひらがなを入力してください。"
+
+msgid "Please enter your katakana"
+msgstr "カタカナを入力してください。"
+
+msgid "Please enter your kanzi"
+msgstr "日本語を入力してください。"
+
+### 共通 ###
+
+msgid "This is a required input item."
+msgstr "必須の入力項目です。"
+
+msgid "The input value is already in use."
+msgstr "その入力値はすでに使用されています。"
